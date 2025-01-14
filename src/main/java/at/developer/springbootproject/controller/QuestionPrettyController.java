@@ -22,7 +22,7 @@ public class QuestionPrettyController{
         this.questionDao = questionDao;
     }
 
-    @GetMapping("/")//http://localhost:8090/questions/all
+    @GetMapping("/all")//http://localhost:8090/questions/all
     public String getQuestions(Model model){
         model.addAttribute("questions",questionService.getAllQuestions());
         adjustImage(model,"");
