@@ -19,6 +19,6 @@ public class Question {
     private String option3;
     private String option4;
     private String right_answer;
-    private String difficulty_level;
+    private String difficulty;
     private String category;
 }

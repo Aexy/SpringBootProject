@@ -1,0 +1,9 @@
+.category-img {
+    width: 150px;  /* Force the width */
+    height: 150px;/* Force the height */
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;        /* Maintain aspect ratio */
+    border: 2px solid #ccc;   /* Optional: Add a border for clarity */
+    border-radius: 10px;      /* Optional: Rounded corners */
+}
