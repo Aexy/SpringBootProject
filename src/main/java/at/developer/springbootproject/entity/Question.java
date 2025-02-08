@@ -1,13 +1,15 @@
-package at.developer.springbootproject;
+package at.developer.springbootproject.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Data
 @Entity
+@Table(name = "question")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Question {
 
     @Id

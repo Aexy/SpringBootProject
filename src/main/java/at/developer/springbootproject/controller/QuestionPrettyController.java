@@ -1,6 +1,5 @@
 package at.developer.springbootproject.controller;
 
-import at.developer.springbootproject.Question;
 import at.developer.springbootproject.dao.QuestionDao;
 import at.developer.springbootproject.service.QuestionService;
 import org.springframework.stereotype.Controller;
@@ -59,8 +58,6 @@ public class QuestionPrettyController{
         model.addAttribute("questions", questionDao.findByDifficulty(difficulty.toLowerCase()));
         return "questions";
     }
-
-
     /*
         * Auxiliary Methods
      */

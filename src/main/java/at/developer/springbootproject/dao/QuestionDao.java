@@ -1,6 +1,6 @@
 package at.developer.springbootproject.dao;
 
-import at.developer.springbootproject.Question;
+import at.developer.springbootproject.entity.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

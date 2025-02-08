@@ -1,6 +1,6 @@
 package at.developer.springbootproject.service;
 
-import at.developer.springbootproject.Question;
+import at.developer.springbootproject.entity.Question;
 import at.developer.springbootproject.dao.QuestionDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,8 +12,11 @@ import java.util.List;
 @Service
 public class QuestionService {
 
-    @Autowired
-    QuestionDao questionDao;
+    private final QuestionDao questionDao;
+
+    public QuestionService(QuestionDao questionDao) {
+        this.questionDao = questionDao;
+    }
 
     public List<Question> getAllQuestions() {
         return questionDao.findAll();
@@ -41,7 +44,7 @@ public class QuestionService {
             return new ResponseEntity<>("ID not found:" + id, status);
         }
         questionDao.deleteById(id);
-        status = HttpStatus.ACCEPTED;
+        status = HttpStatus.OK;
         return new ResponseEntity<>("Question with the ID: " + id + " has been deleted", status);
     }
 }

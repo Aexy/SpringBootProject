@@ -1,6 +1,6 @@
 package at.developer.springbootproject.controller;
 
-import at.developer.springbootproject.Question;
+import at.developer.springbootproject.entity.Question;
 import at.developer.springbootproject.dao.QuestionDao;
 import at.developer.springbootproject.service.QuestionService;
 import org.springframework.http.ResponseEntity;
